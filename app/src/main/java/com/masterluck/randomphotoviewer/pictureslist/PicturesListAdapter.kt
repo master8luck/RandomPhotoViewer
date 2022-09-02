@@ -44,7 +44,7 @@ class PicturesListAdapter(
         fun bind(photo: PhotoDao, onPhotoClicked: (String) -> Unit) {
             binding.root.setOnClickListener{ onPhotoClicked(photo.rawUrl) }
             Glide.with(binding.root).load(photo.thumbUrl).into(binding.ivPicture)
-            binding.tvDescription.text = photo.description
+            binding.tvAuthorName.text = photo.username
         }
 
     }
